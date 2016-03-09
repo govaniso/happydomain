@@ -1,0 +1,22 @@
+<?php echo View::content(); ?>
+
+<h1 class="ui header dividing"><?php echo $proveedor->nombre ?></h1>
+
+<table class="ui table">
+    <thead>
+        <tr>
+            <th>Dominio</th>
+            <th>Vencimiento</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($proveedor->getDominios() as $d): ?>
+            <tr>
+                <td><?php echo $d->dominio ?></td>
+                <td><?php echo $d->vencimiento ?></td>
+                <td><?php echo $d->getCuentas()->username ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

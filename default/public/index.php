@@ -46,6 +46,8 @@ define('APP_CHARSET', 'UTF-8');
  */
 define('PRODUCTION', FALSE);
 
+define('URL_DOMAIN', 'http://localhost:86/happydomain/');
+
 /**
  * Establece polí­tica de informe de errores
  */

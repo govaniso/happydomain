@@ -1,0 +1,20 @@
+<?php echo View::content(); ?>
+
+<h1 class="ui header dividing">Proveedores</h1>
+
+<table class="ui table">
+    <thead>
+        <tr>
+            <th>Proveedor</th>
+            <th>URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach (Load::model("Proveedores")->find() as $p): ?>
+            <tr>
+                <td> <a href="<?php echo URL_DOMAIN, "proveedores/dominios/", $p->id ?>"> <?php echo $p->nombre ?></a></td>
+                <td><a href="<?php echo $p->url ?>" target="_blank"><?php echo $p->url ?></a></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

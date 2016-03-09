@@ -1,0 +1,19 @@
+<h1>Dominios</h1>
+<table class="ui table">
+    <thead>
+        <tr>
+            <th>Dominio</th>
+            <th>Vencimiento</th>
+            <th>Proveedor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($Dominios->get_activos() as $d): ?>
+            <tr>
+                <td><?php echo $d->dominio ?></td>
+                <td><?php echo $d->vencimiento ?></td>
+                <td><?php echo $d->getCuentas()->getProveedores()->nombre ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
